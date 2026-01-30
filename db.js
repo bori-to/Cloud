@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 // Database
 const sequelize = new Sequelize(
-  '', // TODO: database connection string
+  process.env.DATABASE_URL, // Use DATABASE_URL environment variable from Render
   {
     dialect: 'postgres',
     dialectOptions: {
